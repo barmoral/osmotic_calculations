@@ -1,0 +1,32 @@
+#
+# 3m salt and water
+#
+seed -1
+tolerance 2.0
+
+structure ../structures/water.pdb
+  number 3700 
+  inside box 0. 0. 0. 48. 48. 48.
+end structure
+
+structure ../structures/na.pdb
+  number 217 
+  inside box 0. 0. 48. 48. 48. 96.
+end structure
+
+structure ../structures/cl.pdb
+  number 217 
+  inside box 0. 0. 48. 48. 48. 96.
+end structure
+
+structure ../structures/water.pdb
+  number 3700
+  inside box 0. 0. 48. 48. 48. 96.
+end structure
+
+structure ../structures/water.pdb
+  number 3700 
+  inside box 0. 0. 96. 48. 48. 144.
+end structure
+
+output HW_35m_r3.pdb
