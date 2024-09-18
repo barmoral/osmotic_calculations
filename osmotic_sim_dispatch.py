@@ -48,7 +48,7 @@ from polymerist.mdtools.openmmtools.parameters import SimulationParameters
 @allow_string_paths
 def produce_interchange(pdb_path : Optional[str], working_dir : Path, file_prefix : str, ff_names : Optional[Iterable[str]]=None) -> Interchange:
     '''Load a valid OpenFF Interchange for the given PDB system, creating a new one and writing relevant files if none is found'''
-    # boilerplate to initial default values if none are given
+    # boilerplate to initial default values if none are given. Has to be changed manually if different forcefields are wanted. TO-DO: add this option to the argparse function
     if ff_names is None:
         ff_names = [
             'openff-2.1.0.offxml',
@@ -97,8 +97,9 @@ def insert_harmonic_potential_OpenMM(
         target_residues : Optional[list[str]]=None,
     ) -> None:
     '''Adds a custom harmonic force to an OpenMM System and registers selected particles to that force'''
+    
     if target_residues is None:
-        target_residues = ['NA', 'CL']
+        target_residues = ['NA', 'CL'] # these residues can change depending on the ions used in simulation. TO-DO: incorporate this to the arg parse function
 
     fb_force = CustomExternalForce('0.5*k*((z-z0)^2)')
     fb_force.addGlobalParameter('k', k)
@@ -120,6 +121,9 @@ def insert_flat_bottom_potential_OpenMM(
         target_residues : Optional[list[str]]=None,
     ) -> None:
     '''Adds a custom flat-bottomed potential force to an OpenMM System and registers selected particles to that force'''
+    if target_residues is None:
+        target_residues = ['NA', 'CL'] # these residues can change depending on the ions used in simulation. TO-DO: incorporate this to the arg parse function
+
     fb_force = CustomExternalForce('0.5*k*(max(0, abs(z-z0)-rbf)^2)')
     fb_force.addGlobalParameter('k', k)
     fb_force.addGlobalParameter('rbf', delta_z)
