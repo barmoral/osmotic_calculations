@@ -1,4 +1,4 @@
-Calculation and analysis of osmotic values.
+Calculation and analysis of osmotic values:
 
 Calculations can be performed with two different types of restraints: Harmonic Potential (HP) and Flat-Bottom Potential (FBP).
 
