@@ -18,7 +18,7 @@ I included example script files to use in a cluster called run_HP_openmm.sh and 
 Steps to run HP calculations and analysis:
 1. Define maximum concentration desired and corresponding number of ions needed in the given volume. (I used 3.5 molal as maximum concentration, which requires 217 NaCl molecules (217 of each ion))
 2. Estimate the force constant using notebook force_constant_hps.ipynb. (0.68095403 kJ/mol/nm^2 was the result I obtained)
-3. Run in cluster using script file run_HP_openmm_ssd.sh. (I indicated the variables that need to be modified. Make sure the variable 'RESTRAINT' is set to HP)
+3. Run in cluster using script file run_HP_openmm.sh. (I indicated the variables that need to be modified. Make sure the variable 'RESTRAINT' is set to HP)
 4. The script file will generate the sim_param_sets directory, which contains the json files with simulation scheduling instructions. If you want to modify the equilibration or production run setup, it must be done in the code build_sim_params.py directly before running the script file.
 5. The script file will then run the calculation code, osmotic_sim_dispatch.py, which will generate two directories: 1) holds a copy of the input .pdb file, and generated .sdf and .pkl files. 2) holds all simulation outputs (labeled with postfix '_sims' at the end).
 6. Get the .dcd trajectory files from the 'prod_sim' subfolder of each calculation, and use the function mdconvert in the CLI from the mdtraj package to convert these to .xtc trajectory files.
@@ -28,7 +28,7 @@ Steps to run HP calculations and analysis:
 Steps to run FBP calculations and analysis:
 1. Define which concentrations are wanted and their corresponding number of ions for the given volume. (I used 1 molal, 2 molal, and 3 molal, which respectively required 65, 128, and 188 NaCl molecules)
 2. Define desired force constant. (I use 4184 kJ/mol/nm^2, which is the one Luo& Roux recommended in their 2010 paper I was attempting to replicate)
-3. Run in cluster using script file run_FBP_openmm_ssd.sh. (I indicated the variables that need to be modified. Make sure the variable 'RESTRAINT' is set to FBP)
+3. Run in cluster using script file run_FBP_openmm.sh. (I indicated the variables that need to be modified. Make sure the variable 'RESTRAINT' is set to FBP)
 4. The script file will generate the sim_param_sets directory, which contains the json files with simulation scheduling instructions. If you want to modify the equilibration or production run setup, it must be done in the code build_sim_params.py directly before running the script file.
 5. The script file will then run the calculation code, osmotic_sim_dispatch.py, which will generate two directories: 1) holds a copy of the input .pdb file, and generated .sdf and .pkl files. 2) holds all simulation outputs (labeled with postfix '_sims' at the end).
 6. Get the .dcd trajectory files from the 'prod_sim' subfolder of each calculation, and use the function mdconvert in the CLI from the mdtraj package to convert these to .xtc trajectory files.
