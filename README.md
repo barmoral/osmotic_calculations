@@ -3,10 +3,16 @@ Calculation and analysis of osmotic values:
 Calculations can be performed with two different types of restraints: Harmonic Potential (HP) and Flat-Bottom Potential (FBP).
 
 Python codes were written for simulation boxes with dimension of 4.8nm x 4.8nm x 14.4 nm.
+
 The number of ions in each simulation changes depending on the desired concentration in the box.
+
 The number of water molecules stays fixed at 11100.
+
 Input coordinate files are generated using packmol. The packmol inputs and outputs can be found on the directory called 'structures'.
+
 The force constant (k, with units of kJ/mol/nm^2) used for HP and FBP restraints is different. While the FBP method is not very sensitive to the force constant value (in here I use the same value as the method developers, Luo & Roux), HP is highly sensitive, and this value has to be estimated beforehand using the python notebook called 'force_constant_hps.ipynb'.
+
+I included example script files to use in a cluster called run_HP_openmm.sh and run_FBP_openmm.sh, which can also give an idea of how to run the calculations from any CLI.
 
 
 Steps to run HP calculations and analysis:
