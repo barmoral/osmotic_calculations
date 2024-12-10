@@ -8,7 +8,7 @@ Calculations can be performed with two different types of restraints: [Harmonic 
 * The number of ions in each simulation changes depending on the desired concentration in the box.
 * The number of water molecules stays fixed at 11100.
 
-* Input coordinate files are generated using packmol. The packmol inputs and outputs can be found on the directory called 'structures'.
+* Input coordinate files are generated using packmol. The packmol inputs and outputs can be found on the directory called ['structures'](structures/).
 
 * The force constant (k, with units of kJ/mol/nm^2) used for HP and FBP restraints is different. While the FBP method is not very sensitive to the force constant value (in here I use the same value as the method developers, [Luo & Roux](https://pubs.acs.org/doi/10.1021/jz900079w)), HP is highly sensitive, and this value has to be estimated beforehand using the python notebook called ['force_constant_hps.ipynb'](https://github.com/barmoral/osmotic_calculations/blob/main/force_constant_hps.ipynb).
 
