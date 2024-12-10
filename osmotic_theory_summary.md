@@ -12,6 +12,7 @@ $$\langle F_{wall} \rangle = \frac{k}{N} \sum_{N} \sum_{i} (|z_{i} - z_{wall}|)$
 $$\Pi_{observed}=\langle F_{wall} \rangle / A$$  &nbsp;&nbsp;*(2)*		
 
 ![Figure 1: 1m NaCl simulation with outlined flat-bottom potential (red line).](https://github.com/barmoral/osmotic_calculations/blob/main/FBP.png)
+*Figure 1: 1m NaCl simulation with outlined flat-bottom potential (red line).*
 
 <ins>Osmotic pressure calculation using a harmonic potential:</ins>
 
@@ -29,6 +30,8 @@ $$\Pi(z)= - \nu \int_{\infty}^{z} C(z) \frac{dU(z)}{dz} dz$$   &nbsp;&nbsp;*(6)*
 
 
 ![Figure 2: 3m NaCl simulation with outlines harmonic potential (red line) and concentration gradient (orange line).](https://github.com/barmoral/osmotic_calculations/blob/main/HP.png)
+*Figure 2: 3m NaCl simulation with outlines harmonic potential (red line) and concentration gradient (orange line).*
+
 
 ### References:
 1. S. Murad and J. G. Powles, “Computer simulation of osmosis and reverse osmosis in solutions,” Chemical Physics Letters, vol. 225, no. 4, pp. 437–440, 1994, doi: 10.1016/0009-2614(94)87108-6.
