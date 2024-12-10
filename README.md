@@ -1,7 +1,7 @@
 Calculation and Analysis of Osmotic Values
 ================
 
-Calculations can be performed with two different types of restraints: Harmonic Potential (HP) and Flat-Bottom Potential (FBP).
+Calculations can be performed with two different types of restraints: [Harmonic Potential (HP) and Flat-Bottom Potentials (FBPs)](osmotic_theory_summary.md).
 
 ### Simulation Details
 * Python codes were written for simulation boxes with dimension of 4.8nm x 4.8nm x 14.4 nm.
