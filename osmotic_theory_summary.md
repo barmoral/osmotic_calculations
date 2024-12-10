@@ -7,9 +7,9 @@ Early molecular dynamics methods for osmotic pressure, introduced by Murad and P
 
 Simulating virtual semi-permeable walls using flat-bottomed potentials (figure 1) allows for the calculation of osmotic pressure for a single concentration. The mean force of the system's walls exerted on the ions is directly related to the osmotic pressure as shown in *equation 1*, where Fwall is the instantaneous force exerted by one wall onto the ions, k is the force constant, N is the number of steps, zi is the position in the z axis of the ions located outside of both the walls, and zwall is the position of the wall. The mean force is averaged between the two half-harmonic walls. The osmotic pressure was calculated as shown in *equation 2*, where A is the cross-sectional area of the simulation box, and with it, the osmotic coefficients are calculated as a ratio between the observed and ideal results.
 
-$$\langle F_{wall} \rangle = \frac{k}{N} \sum_{N} \sum_{i} (|z_{i} - z_{wall}|)$$  *(1)* 	
+$$\langle F_{wall} \rangle = \frac{k}{N} \sum_{N} \sum_{i} (|z_{i} - z_{wall}|)$$  &nbsp;*(1)* 	
 	
-$$\Pi_{observed}=\langle F_{wall} \rangle / A$$  *(2)*		
+$$\Pi_{observed}=\langle F_{wall} \rangle / A$$  &nbsp;*(2)*		
 
 ![Figure 1: 1m NaCl simulation with outlined flat-bottom potential (red line).](https://github.com/barmoral/osmotic_calculations/blob/main/FBP.png)
 
@@ -17,15 +17,15 @@ $$\Pi_{observed}=\langle F_{wall} \rangle / A$$  *(2)*
 
 A harmonic potential allows for the calculation of osmotic pressure for a nonuniform equilibrium concentration profile for ions (figure 2). The potential curve used in this method uses the form of   , where k is the spring constant and z is the z coordinate centered in the box. In equilibrium, slices of a concentration profile are regarded as stationary under the sum of three forces: the gradient of external potential (FU, *eq. 3*), and the osmotic pressure (FΠ, *eq. 4*) on the two sides of the slice, which will differ slightly because of the nonuniform concentration. C(z) is the total concentration at height z, and Δz is the length of the slice.
 
-$$F_{U} = C(z) \frac{dU(z)}{dz} \Delta z $$  *(3)*		
+$$F_{U} = C(z) \frac{dU(z)}{dz} \Delta z $$  &nbsp;*(3)*		
 
-$$F_{\Pi} = \frac{d\Pi(z)}{dz} \Delta z$$   *(4)*
+$$F_{\Pi} = \frac{d\Pi(z)}{dz} \Delta z$$   &nbsp;*(4)*
 
 When the system is in equilibrium these forces sum to 0. The change in osmotic pressure across a slice is proportional to the change in the harmonic potential multiplied by the concentration of the slice, as seen in *equation 5*. One can integrate the force balance equation after plugging in it the harmonic potential, as seen in *equation 6*, and with it solve for the osmotic pressure at the coordinates of both sides of a slice by averaging over their corresponding concentration.
 
-$$\frac{d\Pi(z)}{dz}= -\nu C(z) \frac{dU(z)}{dz}$$  *(5)*
+$$\frac{d\Pi(z)}{dz}= -\nu C(z) \frac{dU(z)}{dz}$$  &nbsp;*(5)*
 	
-$$\Pi(z)= - \nu \int_{\infty}^{z} C(z) \frac{dU(z)}{dz} dz$$   *(6)*
+$$\Pi(z)= - \nu \int_{\infty}^{z} C(z) \frac{dU(z)}{dz} dz$$   &nbsp;*(6)*
 
 
 ![Figure 2: 3m NaCl simulation with outlines harmonic potential (red line) and concentration gradient (orange line).](https://github.com/barmoral/osmotic_calculations/blob/main/HP.png)
