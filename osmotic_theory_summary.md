@@ -3,7 +3,7 @@ Theory for the Calculation of Osmotic Values
 
 Early molecular dynamics methods for osmotic pressure, introduced by Murad and Powles [1], utilized semipermeable membranes within the simulation to separate solvent and solution regions. Luo and Roux [2] refined this approach by employing flat-bottom potentials as virtual semi-permeable walls to simplify the process and avoid complications from direct membrane modeling. These techniques require multiple simulations to explore the concentration dependence of the osmotic equation-of-state. To streamline this, Milner et al. [3] developed the osmotic force balance method, applying an external harmonic potential to solutes, thereby enabling easier assessment of osmotic pressure gradients. They successfully applied this to study substances like NaCl and mixtures like benzene and pyridine. Hosseini et al. [4] expanded on this in 2023, calculating chemical potentials for 15 alkali halide salts, thereby providing a more efficient method to determine osmotic pressures and propose Lennard-Jones parameters for these salts. I have replicated the calculations of osmotic pressure with respect to concentration using both techniques.
 
-<ins>Osmotic Pressure calculation using flat-bottom potentials:</ins>
+## <ins>Osmotic Pressure calculation using flat-bottom potentials:</ins>
 
 Simulating virtual semi-permeable walls using flat-bottomed potentials (figure 1) allows for the calculation of osmotic pressure for a single concentration. The mean force of the system's walls exerted on the ions is directly related to the osmotic pressure as shown in *equation 1*, where Fwall is the instantaneous force exerted by one wall onto the ions, k is the force constant, N is the number of steps, zi is the position in the z axis of the ions located outside of both the walls, and zwall is the position of the wall. The mean force is averaged between the two half-harmonic walls. The osmotic pressure was calculated as shown in *equation 2*, where A is the cross-sectional area of the simulation box, and with it, the osmotic coefficients are calculated as a ratio between the observed and ideal results.
 
@@ -14,7 +14,7 @@ $$\Pi_{observed}=\langle F_{wall} \rangle / A$$  &nbsp;&nbsp;*(2)*
 ![Figure 1: 1m NaCl simulation with outlined flat-bottom potential (red line).](https://github.com/barmoral/osmotic_calculations/blob/main/FBP.png)
 *Figure 1: 1m NaCl simulation with outlined flat-bottom potential (red line).*
 
-<ins>Osmotic pressure calculation using a harmonic potential:</ins>
+## <ins>Osmotic pressure calculation using a harmonic potential:</ins>
 
 A harmonic potential allows for the calculation of osmotic pressure for a nonuniform equilibrium concentration profile for ions (figure 2). The potential curve used in this method uses the form of   , where k is the spring constant and z is the z coordinate centered in the box. In equilibrium, slices of a concentration profile are regarded as stationary under the sum of three forces: the gradient of external potential (FU, *eq. 3*), and the osmotic pressure (FΠ, *eq. 4*) on the two sides of the slice, which will differ slightly because of the nonuniform concentration. C(z) is the total concentration at height z, and Δz is the length of the slice.
 
