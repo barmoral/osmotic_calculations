@@ -7,6 +7,7 @@ Calculations can be performed with two different types of restraints: [Harmonic 
 * Python codes were written for simulation boxes with dimension of 4.8nm x 4.8nm x 14.4 nm.
 * The number of ions in each simulation changes depending on the desired concentration in the box.
 * The number of water molecules stays fixed at 11100.
+* The sample simulations performed in this repository were equilibrated for 2 ns and their production run lasted 20 ns.
 
 * Input coordinate files are generated using packmol. The packmol inputs and outputs can be found on the directory called ['structures'](structures/).
 
