@@ -38,4 +38,4 @@ Calculations can be performed with two different types of restraints: [Harmonic 
 
 
 ### Code to compare FBPs and HP results with experiments:
-The directory called FBPs_vs_HP_vs_Experiments merges the results for both calculation types and plots them along with experiments to be able to compare all of them.
+The directory called [FBPs_vs_HP_vs_Experiments](FBPs_vs_HP_vs_Experiments/) merges the results for both calculation types and plots them along with experiments to be able to compare all of them.
