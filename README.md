@@ -35,3 +35,7 @@ Calculations can be performed with two different types of restraints: [Harmonic 
 6. Get the .dcd trajectory files from the 'prod_sim' subfolder of each calculation, and use the function mdconvert in the CLI from the mdtraj package to convert these to .xtc trajectory files.
 7. Get the .pdb coordinate files from the 'prod_sim' subfolder of each calculation, and copy these along with their corresponding .xtc trajectory files into the [osmotic_calculations_trajs/FBPs](https://github.com/barmoral/osmotic_calculations/tree/main/osmotic_calculations_trajs/FBPs) directory, or directly into the [FlatBottomPotentials_analysis](https://github.com/barmoral/osmotic_calculations/tree/main/FlatBottomPotentials_analysis) directory. (Just make sure to specify the desired working directory)
 8. Run the analysis notebook called [FBP_analysis.ipynb](https://github.com/barmoral/osmotic_calculations/blob/main/FlatBottomPotentials_analysis/FBP_analysis.ipynb), also located in FlatBottomPotentials_analysis directory.
+
+
+### Code to compare FBPs and HP results with experiments:
+The directory called FBPs_vs_HP_vs_Experiments merges the results for both calculation types and plots them along with experiments to be able to compare all of them.
