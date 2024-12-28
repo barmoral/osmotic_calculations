@@ -1,6 +1,6 @@
 {
-    "mean_osmotic_pressure": 50.232,
-    "uncertainty_osmotic_pressure": 0.647,
-    "mean_osmotic_coefficient": 1.033,
-    "uncertainty_osmotic_coefficient": 0.013
+    "mean_osmotic_pressure": 50.141,
+    "uncertainty_osmotic_pressure": 3.907,
+    "mean_osmotic_coefficient": 1.032,
+    "uncertainty_osmotic_coefficient": 0.08
 }
